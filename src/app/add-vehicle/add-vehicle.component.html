@@ -1,0 +1,82 @@
+<div class="add-vehicle-container">
+  <form [formGroup]="vehicleAddForm">
+    <div class="card">
+      <div class="card-header">Add Vehicle</div>
+      <div class="card-body">
+        <div class="mb-3">
+            <div class="input-group flex-nowrap">
+              <span class="input-group-text" id="addon-wrapping">Vehicle Name</span>
+              <input
+                formControlName="vehicleName"
+                type="text"
+                class="form-control"
+                placeholder="Vehicle Name"
+                aria-label="Vehicle Name"
+                aria-describedby="addon-wrapping"
+              />
+            </div>
+          </div>
+          <div class="mb-3">
+            <div class="input-group flex-nowrap">
+            <select
+              class="form-select"
+              size="3"
+              aria-label="size 3 select example"
+              formControlName="selectedType"
+            >
+              <option selected disabled>Select Vehicle Type</option>
+              <option
+                *ngFor="let vehicleType of vehicleTypes"
+              >
+                {{ vehicleType.type }}
+              </option>
+            </select>
+            </div>
+          </div>
+          <div class="mb-3">
+            <div class="input-group flex-nowrap">
+              <span class="input-group-text" id="addon-wrapping">Latitude</span>
+              <input
+                formControlName="latitude"
+                type="text"
+                class="form-control"
+                placeholder="34.790397"
+                aria-label="latitude"
+                aria-describedby="addon-wrapping"
+              />
+            </div>
+          </div>
+          <div class="mb-3">
+            <div class="input-group flex-nowrap">
+              <span class="input-group-text" id="addon-wrapping">Longtitude</span>
+              <input
+                formControlName="longtitude"
+                type="text"
+                class="form-control"
+                placeholder="32.083378"
+                aria-label="Longtitude"
+                aria-describedby="addon-wrapping"
+              />
+            </div>
+          </div>
+          <div class="mb-3">
+            <div class="input-group flex-nowrap">
+                <span class="input-group-text" id="addon-wrapping">Last Successful Connection</span>
+                <input type="datetime-local" id="meeting-time"
+                    name="meeting-time" formControlName="lastSuccessfulConnection">
+            </div>
+          </div>
+
+          <div class="mb-3 messages" *ngIf="successMessage || errorMessage">
+            <div class="success-message" *ngIf="successMessage">{{successMessage}}</div>
+            <div class="error-message" *ngIf="errorMessage">{{errorMessage}}</div>
+          </div>
+      </div>
+      <div class="card-footer text-muted">
+          <div class="add-button">
+            <button type="button" class="btn btn-success" (click)="onAddVehicle()">Add</button>
+          </div>
+      </div>
+    </div>
+  </form>
+</div>

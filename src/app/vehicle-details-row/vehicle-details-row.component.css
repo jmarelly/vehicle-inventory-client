@@ -1,0 +1,21 @@
+.button-container {
+  display: flex;
+}
+
+.button-container > button {
+  margin: 10px;
+  cursor: pointer;
+}
+
+.messages {
+  display: flex;
+  justify-content: center;
+}
+
+.error-message {
+  color: red;
+}
+
+.success-message {
+  color: green;
+}

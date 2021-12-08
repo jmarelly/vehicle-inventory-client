@@ -1,0 +1,23 @@
+tr {
+    margin-bottom: 30px;
+  }
+
+  .card{
+    margin: 10px;
+    max-width: 400px;
+  }
+
+  .grid-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  
+  .card-footer{
+    display: flex;
+    justify-content: space-around;
+  }
+
+  tr{
+    cursor: pointer;
+  }

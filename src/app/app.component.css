@@ -1,0 +1,15 @@
+.main-container{
+    height: 100%;
+}
+
+.wrapper{
+   /* width: 80vw; */
+   display: flex;
+   justify-content: center;
+}
+
+.header{
+    display: flex;
+    justify-content: center;
+    margin: 30px;
+}

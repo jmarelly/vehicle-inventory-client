@@ -1,0 +1,21 @@
+<div class="grid-container" *ngIf="vehicleData">
+  <div class="card">
+    <div class="card-header">
+      {{vehicleData.name}}
+    </div>
+    <div class="card-body">
+      <h5 class="card-title">{{vehicleData.type}}</h5>
+      <p class="card-text"></p>
+    </div>
+
+      <ul class="list-group list-group-flush">
+        <li class="list-group-item">Creation Date: {{vehicleData.creation_date}}</li>
+        <li class="list-group-item">Latitude: {{vehicleData.latitude}}</li>
+        <li class="list-group-item">Longtitude: {{vehicleData.longtitude}}</li>
+        <li class="list-group-item">Last Successful Connection: {{vehicleData.last_successful_connection}}</li>
+      </ul>
+      <div class="card-footer text-muted">
+        
+      </div>
+  </div>
+</div>

@@ -1,0 +1,14 @@
+/* .grid-container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+tr {
+  margin-bottom: 30px;
+} */
+
+.loader {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

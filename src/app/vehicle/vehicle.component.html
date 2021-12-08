@@ -1,0 +1,32 @@
+<div class="table-responsive">
+  <table class="table table-striped table-hover" *ngIf="vehiclesData.length > 0 else noVehicles">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Vehicle Name</th>
+        <th scope="col">Vehicle Type</th>
+        <th scope="col">Longtitude</th>
+        <th scope="col">Latitude</th>
+        <th scope="col">Last Successful Connection</th>
+        <th scope="col">Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr 
+      *ngFor="let vehicleData of vehiclesData; index as i;" 
+      app-vehicle-details-row 
+      [vehicleData]="vehicleData" 
+      [index]="i" 
+      (uuidEvent)='onDeleteVehicle($event)'
+      (newVehicleEvent)="onSaveVehicle($event)"></tr>
+    </tbody>
+  </table>
+<ng-template #noVehicles>
+  Vehicle Inventory Is Empty
+</ng-template>
+  <div class="loader" *ngIf="toLoad">
+      <app-loader></app-loader>
+  </div>
+</div>
+
+  

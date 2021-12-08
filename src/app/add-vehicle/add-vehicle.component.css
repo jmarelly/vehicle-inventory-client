@@ -1,0 +1,27 @@
+.add-vehicle-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  
+  .card-body{
+    padding: 10px;
+  }
+
+  .card-footer{
+    display: flex;
+    justify-content: space-around;
+  }
+
+  .messages{
+      display: flex;
+      justify-content: center;
+  }
+
+  .error-message{
+      color: red;
+  }
+
+  .success-message{
+    color: green;
+}
