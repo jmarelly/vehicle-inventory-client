@@ -1,11 +1,6 @@
-.main-container{
-    height: 100%;
-}
-
 .wrapper{
-   /* width: 80vw; */
-   display: flex;
-   justify-content: center;
+   margin-left: 10%;
+   margin-right: 10%;
 }
 
 .header{
