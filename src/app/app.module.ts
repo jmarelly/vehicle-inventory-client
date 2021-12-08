@@ -6,7 +6,6 @@ import { Routes, RouterModule } from '@angular/router';
 import { ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
-import { GOOGLE_MAPS_API_KEY } from '../../src/app/api_keys/google_maps_key'
 
 import { AppComponent } from './app.component';
 import { VehicleComponent } from './vehicle/vehicle.component';
@@ -58,9 +57,6 @@ const appRoutes: Routes = [
     MatDatepickerModule,
     BrowserModule,
     RouterModule.forRoot(appRoutes),
-    AgmCoreModule.forRoot({
-      apiKey: GOOGLE_MAPS_API_KEY,
-    }),
     BrowserAnimationsModule,
     NgxMatDatetimePickerModule,
     NgxMatTimepickerModule,
