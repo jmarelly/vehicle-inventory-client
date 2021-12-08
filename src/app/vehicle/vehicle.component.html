@@ -21,11 +21,13 @@
       (newVehicleEvent)="onSaveVehicle($event)"></tr>
     </tbody>
   </table>
-  <div class="loader" *ngIf="toLoad">
-      <app-loader></app-loader>
-  </div>
+</div>
+<div class="loader" *ngIf="toLoad">
+  <app-loader></app-loader>
 </div>
 <ng-template #noVehicles>
-  Vehicle Inventory Is Empty
+  <div class="empty-inventory">
+    Vehicle Inventory Is Empty
+  </div>
 </ng-template>
   
